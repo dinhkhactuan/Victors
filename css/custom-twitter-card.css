@@ -1,0 +1,132 @@
+:root {
+    --twitter-bg-surface: #1e293b;
+    /* Card background */
+    --twitter-accent-blue: #38bdf8;
+    /* Electric blue for CTA and verified badge */
+    --twitter-text-primary: #f8fafc;
+    /* Heading color */
+    --twitter-text-secondary: #94a3b8;
+    /* Paragraph/Handle color */
+    --twitter-border-dim: #334155;
+    /* Subtle borders */
+    --twitter-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Clickable Testimonial Card --- */
+.testimonial-link {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+    max-width: 550px;
+    margin: -100px auto 40px auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 100;
+    transition: var(--twitter-transition);
+}
+
+.testimonial-card {
+    background: var(--twitter-bg-surface);
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--twitter-border-dim);
+    text-align: left;
+}
+
+.testimonial-link:hover {
+    transform: translateY(-8px);
+}
+
+.testimonial-link:hover .testimonial-card {
+    border-color: var(--twitter-accent-blue);
+    background: #243147;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--twitter-accent-blue);
+}
+
+.x-testimonial {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.testimonial-card figcaption {
+    display: block;
+    text-align: left;
+}
+
+.testimonial-card .name {
+    display: flex;
+    /* Align text and verified icon */
+    align-items: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: var(--twitter-text-primary);
+    line-height: 1.2;
+}
+
+.testimonial-card .handle {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--twitter-text-secondary);
+    margin-top: 2px;
+}
+
+.testimonial-card .verified-icon {
+    height: 18px;
+    /* Adjust size of verified icon */
+    width: auto;
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.testimonial-card .x-icon {
+    fill: #ffffff;
+}
+
+.testimonial-card blockquote {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin: 20px 0 16px 0;
+    padding: 0;
+    border: none;
+    line-height: 1.6;
+}
+
+.testimonial-card blockquote p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.testimonial-card strong {
+    color: var(--twitter-text-primary);
+    /* White for emphasis as per image */
+    font-weight: 700;
+}
+
+.testimonial-card .date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--twitter-text-secondary);
+}

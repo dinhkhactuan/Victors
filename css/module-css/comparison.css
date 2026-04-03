@@ -1,0 +1,232 @@
+/*==========Comparison Table CSS Start==========*/
+
+.comparison-section {
+    position: relative;
+    padding: 50px 0;
+}
+
+/* Use local variables for the table to avoid affecting global scope */
+.comparison-section {
+    --table-primary: #f56915;
+    --table-primary-dark: #d95a0f;
+    --table-primary-soft: #fff5eb;
+    --table-border: #e5e7eb;
+    --table-text: #111827;
+    --table-text-muted: #6b7280;
+    --table-bg: #ffffff;
+}
+
+.comparison-section .section-title {
+    margin-bottom: 15px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--table-bg);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.08),
+        0 10px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+.comparison-table caption {
+    caption-side: bottom;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--table-text-muted);
+    text-align: center;
+}
+
+/* HEADERS */
+.comparison-table thead th {
+    background: #f9fafb;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1.25rem 1.25rem;
+    border-bottom: 1px solid var(--table-border);
+    color: #000;
+}
+
+/* CELLS */
+.comparison-table th,
+.comparison-table td {
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--table-border);
+    font-size: 1rem;
+    color: var(--table-text);
+    vertical-align: middle;
+}
+
+/* ROW HEADER */
+.comparison-table tbody th {
+    font-weight: 600;
+}
+
+/* ZEBRA ROWS */
+.comparison-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* MY COMPANY COLUMN */
+.comparison-table .my-company {
+    background: var(--table-primary-soft);
+    color: var(--table-primary-dark);
+    font-weight: 600;
+}
+
+/* CTA ROW */
+.cta-row th,
+.cta-row td {
+    background: #f8fafc;
+    border-bottom: none;
+}
+
+.cta-row td {
+    text-align: center;
+}
+
+/* CTA BUTTON */
+.cta-primary.sec-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0.85rem 2rem;
+    background: var(--table-primary);
+    color: #ffffff;
+    border-radius: 999px;
+    text-transform: none;
+    box-shadow: 0 10px 25px rgba(245, 105, 21, 0.35);
+    transition: all 0.3s ease;
+}
+
+.cta-primary.sec-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(245, 105, 21, 0.45);
+    background: var(--table-primary-dark);
+}
+
+.cta-muted {
+    color: var(--table-text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .comparison-section {
+        padding: 30px 15px;
+        /* Add some padding for mobile */
+    }
+
+    .comparison-table caption {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        white-space: normal;
+        padding: 0 15px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        caption-side: top;
+        line-height: 1.4;
+    }
+
+    .comparison-table,
+    .comparison-table tbody {
+        display: block;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    /* CARD STYLE FOR ROWS */
+    .comparison-table tbody tr {
+        display: block;
+        background: #ffffff;
+        margin-bottom: 1.5rem;
+        padding: 1.25rem 1.25rem 1rem;
+        border-radius: 18px;
+        box-shadow:
+            0 18px 35px rgba(0, 0, 0, 0.08),
+            0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    /* FEATURE TITLE */
+    .comparison-table tbody th {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        border-bottom: 1px solid var(--table-border);
+        padding-bottom: 0.75rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* VALUES */
+    .comparison-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        padding: 0.75rem 0;
+        font-size: 0.95rem;
+    }
+
+    .comparison-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--table-text-muted);
+        margin-right: 1rem;
+    }
+
+    /* MY COMPANY EMPHASIS */
+    .comparison-table tbody td.my-company {
+        background: var(--table-primary-soft);
+        padding: 0.75rem 1rem;
+        margin: 0 -1.25rem;
+        /* Stretch to edges */
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        color: var(--table-primary-dark);
+        border-radius: 0;
+    }
+
+    /* CTA ROW specific */
+    .cta-row {
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    .cta-row th {
+        display: none;
+    }
+
+    .cta-row td {
+        display: block;
+        padding: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .cta-row td::before {
+        display: none;
+    }
+
+    /* FIX BUTTON RESPONSIVENESS */
+    .cta-primary.sec-btn {
+        width: 100%;
+        display: flex;
+        margin-top: 0.5rem;
+    }
+}
+
+/*==========Comparison Table CSS End==========*/

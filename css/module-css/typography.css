@@ -1,0 +1,48 @@
+/* ============================================
+   START - COMMON TYPOGRAPHY CSS
+   ============================================ */
+
+.sub-title {
+    display: block;
+    font-size: 22px;
+    line-height: 25px;
+    color: #f56915;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.h2-title {
+    font-size: 50px;
+    line-height: 75px;
+    font-weight: bold;
+    color: #010f2e;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 20px;
+}
+
+.h3-title {
+    font-size: 25px;
+    line-height: 35px;
+    color: #010f2e;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+}
+
+.h5-title {
+    font-size: 20px;
+    line-height: 28px;
+    color: #010f2e;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+}
+
+.center-title {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+/* ============================================
+   END - COMMON TYPOGRAPHY CSS
+   ============================================ */
+

@@ -1,0 +1,248 @@
+/* ============================================
+   START - PORTFOLIO SECTION CSS
+   ============================================ */
+
+.main-portfolio {
+    position: relative;
+    padding-top: 5px;
+}
+
+/* Portfolio Grid */
+.main-portfolio__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.main-portfolio__grid-item {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .main-portfolio__grid-item {
+        width: 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.portfolio-tabbing {
+    text-align: center;
+}
+
+.portfolio-tabbing ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    font-size: 0;
+    line-height: 1;
+}
+
+.portfolio-tabbing ul.clearfix:after {
+    display: none !important;
+}
+
+.portfolio-tabbing ul li {
+    font-size: 15px;
+    line-height: 24px;
+    color: #777777;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.portfolio-tabbing ul li:first-child {
+    margin-left: 0;
+}
+
+.portfolio-tabbing ul li .filter {
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.portfolio-tabbing ul li .filter:hover,
+.portfolio-tabbing ul li .filter.active {
+    color: #f56915;
+    text-decoration: underline;
+}
+
+
+
+.service-detail.portfolio-list-box {
+    padding: 0 0;
+}
+
+.portfoliolist {
+    position: relative;
+}
+
+.portfolio {
+    position: relative;
+    display: block;
+}
+
+.portfolio-item {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .portfolio-item {
+        margin-bottom: 0;
+    }
+}
+
+.portfolio-wrapper {
+    width: 100%;
+    height: 440px;
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.service-detail .portfolio {
+    padding: 0 4px;
+}
+
+.service-detail .portfolio-wrapper {
+    height: 350px;
+}
+
+.portfolio-wrapper:hover {
+    box-shadow: 1px 1px 60px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f56915, #f0a80e);
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.portfolio-wrapper:hover::before {
+    opacity: 0.8;
+}
+
+.portfolio-wrapper .portfolio-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.portfolio-wrapper:hover .portfolio-img {
+    -webkit-transform: translate(-50%, -50%) scale(1.2, 1.2);
+    transform: translate(-50%, -50%) scale(1.2, 1.2);
+}
+
+.portfolio-wrapper-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 5;
+}
+
+.portfolio-wrapper:hover .portfolio-wrapper-text {
+    opacity: 1;
+}
+
+.portfolio-wrapper-text .h3-title {
+    color: #ffffff;
+    font-weight: 800;
+    position: relative;
+    top: -10px;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.portfolio-wrapper:hover .portfolio-wrapper-text .h3-title {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.portfolio-wrapper-text p {
+    color: #ffffff;
+    margin-bottom: 23px;
+    position: relative;
+    top: -10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.portfolio-wrapper:hover .portfolio-wrapper-text p {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.portfolio-wrapper-text a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    color: #f56915;
+    font-size: 25px;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+.portfolio-wrapper:hover .portfolio-wrapper-text a {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.portfolio-wrapper-text a:hover {
+    background: transparent;
+    color: #ffffff;
+    transition-delay: 0s;
+}
+
+.back-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================================
+   END - PORTFOLIO SECTION CSS
+   ============================================ */
+

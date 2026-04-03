@@ -1,0 +1,274 @@
+/* ============================================
+   START - CASE STUDY SECTION CSS
+   ============================================ */
+
+.case-study-section {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.case-study-section__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.case-study-section__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .case-study-section__item {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        margin-bottom: 0;
+    }
+}
+
+
+.case-study-card {
+    background: #ffffff;
+    border: 1px solid #c2bebe;
+    padding-bottom: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.case-study-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.case-study-quote {
+    background: #c2bebe;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    color: #433f34;
+    margin: 0;
+}
+
+.case-study-stats {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.case-study-stat-item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.case-study-stat-left {
+    border-right: 2px solid #c2bebe;
+}
+
+.case-study-stat-right {
+    border-left: 0;
+}
+
+.case-study-stat-number {
+    font-size: 20px;
+    line-height: 28px;
+    color: #010f2e;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+    margin: 0 0 5px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.case-study-stat-label {
+    margin: 0;
+    font-size: 14px;
+    color: #5e5e5e;
+    text-align: center;
+    width: 100%;
+}
+
+.case-study-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #5e5e5e;
+    margin: 8px 0;
+    padding: 0 12px;
+}
+
+.case-study-link {
+    color: #f56915;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: auto;
+    padding: 0 12px 12px 12px;
+}
+
+.case-study-link:hover {
+    color: #010f2e;
+}
+
+.case-study-top-text {
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5e5e5e;
+    padding: 0;
+}
+
+.case-study-bottom-text {
+    margin: 0;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5e5e5e;
+    padding: 0;
+    flex: 1;
+}
+
+.case-study-cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.case-study-cta-button {
+    flex-shrink: 0;
+}
+
+.case-study-round-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f56915;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.case-study-round-btn:hover {
+    background-color: #e55a0d;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.case-study-cta-btn-box {
+    text-align: right;
+    padding-top: 15px;
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+}
+
+.case-study-cta-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none !important;
+    color: var(--thm-black);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.64px;
+    padding: 37px 33px 37px;
+    text-transform: capitalize;
+    padding-right: 0;
+    transition: all 0.5s linear;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.case-study-cta-btn:hover {
+    color: var(--thm-base);
+}
+
+.case-study-cta-btn::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    z-index: -1;
+    width: 104px;
+    height: 104px;
+    background-color: var(--thm-base);
+    border-radius: 50%;
+    transform: scaleY(1.0) rotateX(0deg) translateY(-50%);
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.case-study-cta-btn:hover::after {
+    transform: scaleY(0.0) rotateX(0deg) translateY(-50%);
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.case-study-cta-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    z-index: -1;
+    width: 104px;
+    height: 104px;
+    background-color: var(--thm-black);
+    border-radius: 50%;
+    transform: scaleY(0.0) rotateX(0deg) translateY(-50%);
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+
+.case-study-cta-btn:hover::before {
+    transform: scaleY(1.0) rotateX(0deg) translateY(-50%);
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+/* ============================================
+   END - CASE STUDY SECTION CSS
+   ============================================ */
+

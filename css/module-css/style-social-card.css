@@ -1,0 +1,546 @@
+.social-custom-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Card Container */
+.li-card-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    color: inherit;
+}
+
+.li-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+/* HOVER EFFECTS: UPLIFT + LINKEDIN BLUE GLOW */
+.li-card-link:hover .li-card {
+    transform: translateY(-8px);
+    border-color: #0a66c2;
+    box-shadow: 0 10px 25px rgba(10, 102, 194, 0.25);
+}
+
+/* Header Layout */
+.li-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.li-identity {
+    display: flex;
+    gap: 10px;
+}
+
+.li-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.li-author-footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.li-name-row {
+    display: flex;
+    align-items: center;
+}
+
+.li-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.9);
+    font-style: normal;
+}
+
+/* Verified Badge Style */
+.li-verified-badge {
+    margin-left: 4px;
+    flex-shrink: 0;
+}
+
+.li-conn,
+.li-headline,
+.li-date {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13px;
+}
+
+/* Quote Body */
+.li-quote {
+    margin: 12px 0;
+    padding: 0;
+    font-style: normal;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.li-highlight,
+.li-hashtag {
+    color: #0a66c2;
+    font-weight: 600;
+}
+
+/* REACTION BAR */
+.li-social-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.li-reaction-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.li-icon-stack {
+    display: flex;
+    align-items: center;
+}
+
+.li-mini-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #fff;
+    margin-right: -5px;
+}
+
+.blue-bg {
+    background-color: #0a66c2;
+    z-index: 3;
+}
+
+.yellow-bg {
+    background-color: #f5bb5c;
+    z-index: 2;
+}
+
+.red-bg {
+    background-color: #df704d;
+    z-index: 1;
+}
+
+.li-social-count,
+.li-social-meta {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.li-social-count {
+    margin-left: 8px;
+}
+
+/* Bottom Action Row */
+.li-action-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+
+.li-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.li-action-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Facebook */
+/* Card Layout */
+.fb-testimonial-section {
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.fb-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin: 0 auto;
+}
+
+.fb-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 16px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    /* Added for smooth border transition */
+    transition: all 0.3s ease;
+    /* Added for smooth hover effect */
+}
+
+/* NEW HOVER EFFECTS: UPLIFT + GLOW */
+.fb-card-link:hover .fb-card {
+    transform: translateY(-8px);
+    border-color: #1877F2;
+    box-shadow: 0 10px 25px rgba(24, 119, 242, 0.25);
+}
+
+/* Header & Meta */
+.fb-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.fb-identity {
+    display: flex;
+    gap: 10px;
+}
+
+.fb-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.fb-author-footer {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+}
+
+.fb-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.fb-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #050505;
+}
+
+.fb-verified {
+    flex-shrink: 0;
+}
+
+.fb-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #65676b;
+    font-size: 13px;
+}
+
+.fb-dot {
+    margin-top: -3px;
+}
+
+/* Content Body */
+.fb-content {
+    margin: 4px 0 12px;
+    padding: 0;
+}
+
+.fb-content p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #050505;
+    margin: 0;
+}
+
+.fb-hashtag {
+    color: #1877F2;
+}
+
+/* Reaction Bar */
+.fb-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ebedf0;
+    font-size: 14px;
+    color: #65676b;
+}
+
+.fb-react-group {
+    display: flex;
+    align-items: center;
+}
+
+.fb-stack {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.fb-react-item {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -5px;
+    position: relative;
+}
+
+.fb-react-item:first-child {
+    margin-left: 0;
+    z-index: 3;
+}
+
+.fb-react-item:nth-child(2) {
+    z-index: 2;
+}
+
+.fb-react-item:nth-child(3) {
+    z-index: 1;
+    border: none;
+    width: 18px;
+    height: 18px;
+}
+
+.fb-like-bg {
+    background: #1877F2;
+}
+
+.fb-love-bg {
+    background: #F33E58;
+}
+
+.fb-care-bg {
+    background: #F7B125;
+    overflow: hidden;
+}
+
+/* Positioning Care Elements */
+.fb-care-eyes {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fb-care-heart {
+    position: absolute;
+    bottom: -1px;
+    left: 4px;
+    width: 10px;
+}
+
+/* Navigation Action Bar */
+.fb-actions {
+    display: flex;
+    padding: 4px 0;
+}
+
+.fb-action-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #65676b;
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+
+.fb-action-btn:hover {
+    background: #f2f2f2;
+}
+
+/* X */
+/* ========================================= */
+/*  ISOLATED TESTIMONIAL COMPONENT - SAFE   */
+/* ========================================= */
+
+.testimonial-link-custom {
+    all: unset;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+
+    transition: transform 0.3s ease;
+}
+
+/* Reset everything inside */
+.testimonial-link-custom *,
+.testimonial-link-custom *::before,
+.testimonial-link-custom *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default browser styles */
+.testimonial-link-custom figure,
+.testimonial-link-custom blockquote,
+.testimonial-link-custom cite,
+.testimonial-link-custom p,
+.testimonial-link-custom h1,
+.testimonial-link-custom h2,
+.testimonial-link-custom h3,
+.testimonial-link-custom h4,
+.testimonial-link-custom h5,
+.testimonial-link-custom h6 {
+    all: unset;
+    display: block;
+}
+
+/* Hover */
+.testimonial-link-custom .testimonial-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Card */
+.testimonial-link-custom .testimonial-card {
+    background: var(--card-bg, #ffffff);
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.testimonial-link-custom:hover .testimonial-card {
+    border-color: var(--primary-blue, #007bff);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card .name {
+    color: var(--text-color, #333);
+}
+
+/* Header */
+.testimonial-link-custom .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* User */
+.testimonial-link-custom .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-link-custom .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Author */
+.testimonial-link-custom .author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-link-custom .name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+.testimonial-link-custom .handle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.testimonial-link-custom .verified {
+    color: #1d9bf0;
+    margin-left: 4px;
+}
+
+.testimonial-link-custom .x-icon {
+    width: 22px;
+    height: 22px;
+    fill: #000;
+    flex-shrink: 0;
+}
+
+/* Quote */
+.testimonial-link-custom .quote {
+    margin: 16px 0;
+}
+
+.testimonial-link-custom .quote p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.testimonial-link-custom .quote strong {
+    color: var(--primary-blue, #007bff);
+    background: rgba(0, 123, 255, 0.05);
+    padding: 0 4px;
+}
+
+/* Date */
+.testimonial-link-custom .date {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.check-review {
+    text-align: center;
+    color: #010f2e;
+    font-weight: bold;
+    text-decoration: underline !important;
+    transition: 0.3s;
+}
+
+.check-review:hover {
+    color: #f56915;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}

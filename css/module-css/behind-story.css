@@ -1,0 +1,192 @@
+/* ============================================
+   START - BEHIND STORY SECTION CSS
+   ============================================ */
+
+.behind-story-section {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.behind-story-list-box {
+    position: relative;
+    padding: 0;
+}
+
+.behind-story-list-box__inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.behind-story-section__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.behind-story-section__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .behind-story-section__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.behind-story-card {
+    background: #ffffff;
+    border: 1px solid #c2bebe;
+    padding-bottom: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.behind-story-card__image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.behind-story-card__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.behind-story-card__quote {
+    background: #c2bebe;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    color: #433f34;
+    margin: 0;
+    font-size: 22px;
+    line-height: 25px;
+    font-family: 'Jost', sans-serif;
+}
+
+.behind-story-card__stats {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+    margin-top: 40px;
+    padding-top: 16px;
+}
+
+.behind-story-card__stat-item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.behind-story-card__stat-item--left {
+    border-right: 2px solid #c2bebe;
+}
+
+.behind-story-card__stat-number {
+    margin-bottom: 8px;
+    line-height: 50px;
+}
+
+.behind-story-card__stat-label {
+    margin: 0;
+    margin-top: 4px;
+}
+
+.behind-story-card__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #5e5e5e;
+    margin: 8px 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.behind-story-card__link {
+    color: #f56915;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+}
+
+.behind-story-card__link:hover {
+    color: #010f2e;
+}
+
+.sub-title-txt {
+    font-size: 22px;
+    line-height: 25px;
+    font-family: 'Jost', sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+    .behind-story-section {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .behind-story-section {
+        padding-top: 30px;
+    }
+    
+    .behind-story-section__item {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .behind-story-section__grid {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .behind-story-card__stats {
+        margin: 16px;
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+    
+    .behind-story-card__stat-number {
+        margin-bottom: 12px;
+    }
+    
+    .behind-story-card__stat-label {
+        margin-top: 8px;
+    }
+    
+    .behind-story-card__text {
+        margin: 12px 0;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .behind-story-card__link {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+/* ============================================
+   END - BEHIND STORY SECTION CSS
+   ============================================ */
