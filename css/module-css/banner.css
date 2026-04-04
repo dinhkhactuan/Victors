@@ -371,32 +371,32 @@
 }
 
 .banner-block__logo .logos .amazon-logo:hover {
-    content: url('../../images/banner/amazon-hover.png');
+    /* content: url('../../images/banner/amazon-hover.png'); */
     background: var(--thm-white);
 }
 
 .banner-block__logo .logos .logitech-logo:hover {
-    content: url('../../images/banner/logitech-hover.png');
+    /* content: url('../../images/banner/logitech-hover.png'); */
     background: var(--thm-white);
 }
 
 .banner-block__logo .logos .sentinel-logo:hover {
-    content: url('../../images/banner/sentinel-hover.png');
+    /* content: url('../../images/banner/sentinel-hover.png'); */
     background: var(--thm-white);
 }
 
 .banner-block__logo .logos .salesforce-logo:hover {
-    content: url('../../images/banner/salesforce-hover.png');
+    /* content: url('../../images/banner/salesforce-hover.png'); */
     background: var(--thm-white);
 }
 
 .banner-block__logo .logos .airbnb-logo:hover {
-    content: url('../../images/banner/airbnb-hover.png');
+    /* content: url('../../images/banner/airbnb-hover.png'); */
     background: var(--thm-white);
 }
 
 .banner-block__logo .logos .uber-logo:hover {
-    content: url('../../images/banner/uber-hover.png');
+    /* content: url('../../images/banner/uber-hover.png'); */
     background: var(--thm-white);
 }
 
