@@ -28,7 +28,7 @@
 .testimonial-card {
     background: var(--twitter-bg-surface);
     padding: 32px;
-    border-radius: 24px;
+    border-radius: 8px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--twitter-border-dim);
     text-align: left;
