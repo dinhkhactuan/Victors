@@ -72,7 +72,7 @@
                             Client Login
                         </a>
                         <div class="main-topbar__lang-select select-box clearfix">
-                            <select class="wide">
+                            <select class="wide" style="display: none;">
                                 <option data-display="En">EN</option>
                                 <option value="1">Fr</option>
                                 <option value="2">Gr</option>
@@ -575,14 +575,16 @@
                                     <h3>High Standard</h3>
                                     <p>Grow brands through bold and strategic creative, focused on searching new ways to
                                         showcase user content on digital support and envisioning the future arts.</p>
-                                    <div class="about-one__btn-box">
-                                        <a href="about.html" class="about-one__btn thm-btn">View All Our News</a>
+                                    </div>
+                                    <div class="about-one__standard-img">
+                                        <img src="images/resource/about-one-standard-img.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="about-one__standard-img">
-                                    <img src="images/resource/about-one-standard-img.jpg" alt="">
-                                </div>
-                            </div>
+                                <a href="about.html" style="margin-top: 30px;">
+                                    <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                                        View All Our News</span>
+                                    </button>
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -719,6 +721,39 @@
         </section>
         <!-- Services One End -->
 
+         <!-- Services count index -->
+        <section class="counter-section">
+            <div class="container">
+                <div class="counter-grid">
+                    
+                    <div class="counter-item">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="number"><span class="count" data-target="7000">0</span>K</div>
+                        <p class="label">Projects<br>Completed</p>
+                    </div>
+                    
+                    <div class="counter-item">
+                        <div class="icon"><i class="fas fa-trophy"></i></div>
+                        <div class="number"><span class="count" data-target="16">0</span></div>
+                        <p class="label">Honorable<br>Award</p>
+                    </div>
+                    
+                    <div class="counter-item">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <div class="number"><span class="count" data-target="4000">0</span>K</div>
+                        <p class="label">Satisfied<br>Customers</p>
+                    </div>
+                    
+                    <div class="counter-item">
+                        <div class="icon"><i class="fas fa-business-time"></i></div>
+                        <div class="number"><span class="count" data-target="25">0</span></div>
+                        <p class="label">Years Great<br>Experience</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
         <!-- Project One Start -->
         <section class="project-one">
             <div class="container">
@@ -845,12 +880,16 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="project-one__btn-box">
-                            <a href="project-details.html" class="project-one__btn thm-btn">View More Projects</a>
-                        </div>
                     </div>
                     <!--Project One Single End-->
                 </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <a href="project-details.html">
+                    <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                        View More Projects</span>
+                    </button>
+                </a>
             </div>
         </section>
         <!-- Project One End -->
@@ -946,12 +985,16 @@
             </div>
         </section>
         <!-- Portfolio End -->
-        <div class="d-flex-center">
+        <div class="d-flex-center" style="margin-top: 20px;">
             <div class="main-menu__subscribe-now-btn">
                 <a href="#" class="thm-btn subscribe-now-btn">Subscribe Now</a>
             </div>
             <div>
-                <a href="project-details.html" class="case-study-cta-btn">View More Projects</a>
+                <a href="project-details.html">
+                    <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                        View More Projects</span>
+                    </button>
+                </a>
             </div>
         </div>
         <!-- New block  -->
@@ -967,76 +1010,84 @@
                 </div>
                 <div class="case-study-section__grid">
                     <div class="case-study-section__item">
-                        <div class="case-study-card">
-                            <div class="case-study-image">
-                                <img alt="" src="images/men.png" />
-                            </div>
-                            <h3 class="case-study-quote">Lorem ipsum dolor sit amet</h3>
-                            <div class="case-study-stats">
-                                <div class="case-study-stat-item case-study-stat-left">
-                                    <h5 class="case-study-stat-number">+664%</h5>
-                                    <p class="case-study-stat-label">Lorem ipsum</p>
+                        <a href="link-cua-ban-1.html" class="case-study-card-wrapper" target="_blank">
+                            <div class="case-study-card">
+                                <div class="case-study-image">
+                                    <img alt="" src="images/men.png" />
                                 </div>
-                                <div class="case-study-stat-item case-study-stat-right">
-                                    <h5 class="case-study-stat-number">+360%</h5>
-                                    <p class="case-study-stat-label">Dolor sit</p>
+                                <h3 class="case-study-quote">Lorem ipsum dolor sit amet</h3>
+                                <div class="case-study-stats">
+                                    <div class="case-study-stat-item case-study-stat-left">
+                                        <h5 class="case-study-stat-number">+664%</h5>
+                                        <p class="case-study-stat-label">Lorem ipsum</p>
+                                    </div>
+                                    <div class="case-study-stat-item case-study-stat-right">
+                                        <h5 class="case-study-stat-number">+360%</h5>
+                                        <p class="case-study-stat-label">Dolor sit</p>
+                                    </div>
                                 </div>
+                                <p class="case-study-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                    facilisi. Proin at purus eu risus placerat aliquet. Integer vel
+                                    justo non velit efficitur luctus.
+                                </p>
+                                <span class="case-study-link">Read Lorem ipsum dolor sit amet »</span>
                             </div>
-                            <p class="case-study-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                                facilisi. Proin at purus eu risus placerat aliquet. Integer vel
-                                justo non velit efficitur luctus.
-                            </p>
-                            <a class="case-study-link" href="" target="_blank">Read Lorem ipsum dolor sit amet »</a>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="case-study-section__item">
-                        <div class="case-study-card">
-                            <div class="case-study-image">
-                                <img alt="" src="images/men.png" />
-                            </div>
-                            <h3 class="case-study-quote">Lorem ipsum dolor sit amet</h3>
-                            <div class="case-study-stats">
-                                <div class="case-study-stat-item case-study-stat-left">
-                                    <h5 class="case-study-stat-number">+800%</h5>
-                                    <p class="case-study-stat-label">Lorem ipsum</p>
+                        <a href="link-cua-ban-2.html" class="case-study-card-wrapper" target="_blank">
+                            <div class="case-study-card">
+                                <div class="case-study-image">
+                                    <img alt="" src="images/men.png" />
                                 </div>
-                                <div class="case-study-stat-item case-study-stat-right">
-                                    <h5 class="case-study-stat-number">+640%</h5>
-                                    <p class="case-study-stat-label">Dolor sit</p>
+                                <h3 class="case-study-quote">Lorem ipsum dolor sit amet</h3>
+                                <div class="case-study-stats">
+                                    <div class="case-study-stat-item case-study-stat-left">
+                                        <h5 class="case-study-stat-number">+800%</h5>
+                                        <p class="case-study-stat-label">Lorem ipsum</p>
+                                    </div>
+                                    <div class="case-study-stat-item case-study-stat-right">
+                                        <h5 class="case-study-stat-number">+640%</h5>
+                                        <p class="case-study-stat-label">Dolor sit</p>
+                                    </div>
                                 </div>
+                                <p class="case-study-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                    facilisi. Proin at purus eu risus placerat aliquet. Integer vel
+                                    justo non velit efficitur luctus.
+                                </p>
+                                <span class="case-study-link">Read Lorem ipsum dolor sit amet »</span>
                             </div>
-                            <p class="case-study-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                                facilisi. Proin at purus eu risus placerat aliquet. Integer vel
-                                justo non velit efficitur luctus.
-                            </p>
-                            <a class="case-study-link" href="" target="_blank">Read Lorem ipsum dolor sit amet »</a>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="case-study-section__item">
-                        <div class="case-study-card">
-                            <div class="case-study-image">
-                                <img alt="" src="images/men.png" />
-                            </div>
-                            <h3 class="case-study-quote">Lorem ipsum dolor sit amet</h3>
-                            <div class="case-study-stats">
-                                <div class="case-study-stat-item case-study-stat-left">
-                                    <h5 class="case-study-stat-number">+800%</h5>
-                                    <p class="case-study-stat-label">Lorem ipsum</p>
+                        <a href="link-cua-ban-3.html" class="case-study-card-wrapper" target="_blank">
+                            <div class="case-study-card">
+                                <div class="case-study-image">
+                                    <img alt="" src="images/men.png" />
                                 </div>
-                                <div class="case-study-stat-item case-study-stat-right">
-                                    <h5 class="case-study-stat-number">+640%</h5>
-                                    <p class="case-study-stat-label">Dolor sit</p>
+                                <h3 class="case-study-quote">Lorem ipsum dolor sit amet</h3>
+                                <div class="case-study-stats">
+                                    <div class="case-study-stat-item case-study-stat-left">
+                                        <h5 class="case-study-stat-number">+800%</h5>
+                                        <p class="case-study-stat-label">Lorem ipsum</p>
+                                    </div>
+                                    <div class="case-study-stat-item case-study-stat-right">
+                                        <h5 class="case-study-stat-number">+640%</h5>
+                                        <p class="case-study-stat-label">Dolor sit</p>
+                                    </div>
                                 </div>
+                                <p class="case-study-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                                    facilisi. Proin at purus eu risus placerat aliquet. Integer vel
+                                    justo non velit efficitur luctus.
+                                </p>
+                                <span class="case-study-link">Read Lorem ipsum dolor sit amet »</span>
                             </div>
-                            <p class="case-study-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                                facilisi. Proin at purus eu risus placerat aliquet. Integer vel
-                                justo non velit efficitur luctus.
-                            </p>
-                            <a class="case-study-link" href="" target="_blank">Read Lorem ipsum dolor sit amet »</a>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -1056,9 +1107,14 @@
                         tincidunt. Curabitur sed metus eget auctor sapien at dui scelerisque, vel feugiat elit interdum.
                         Nam ut ligula et lacus vehicula tincidunt. Curabitur sed metus eget.
                     </p>
-                    <div class="case-study-cta-btn-box">
-                        <a href="project-details.html" class="case-study-cta-btn">View More Projects</a>
-                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <a href="project-details.html">
+                        <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                            View More Projects</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1106,13 +1162,12 @@
                     </span>
                 </p>
             </div>
-            <div class="container">
-                <div class="award-banner-image">
-                    <img src="images/services/awardimage.webp" alt="Awards and Recognition" />
-                </div>
-                <div class="main-services-cta-btn-box">
-                    <a href="project-details.html" class="case-study-cta-btn">View More</a>
-                </div>
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href="project-details.html">
+                    <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                        View More Projects</span>
+                    </button>
+                </a>
             </div>
         </section>
         <!-- Services 3 End  -->
@@ -1189,9 +1244,13 @@
                 <div class="award-banner-image">
                     <img src="images/services/awardimage.webp" alt="Awards and Recognition" />
                 </div>
-                <div class="main-services-cta-btn-box">
-                    <a href="project-details.html" class="case-study-cta-btn">View More</a>
-                </div>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href="project-details.html">
+                    <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                        View More Projects</span>
+                    </button>
+                </a>
             </div>
         </section>
         <!-- Comparison Table End -->
@@ -1489,7 +1548,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="main-menu__subscribe-now-btn d-flex-center">
+                <div class="main-menu__subscribe-now-btn d-flex-center" style="margin-top: 20px;">
                     <a href="#" class="thm-btn subscribe-now-btn">Subscribe Now</a>
                 </div>
 
@@ -1548,10 +1607,14 @@
                     </div>
                 </figure>
                 <!-- Testimonial One End -->
-
-                <div class="testimonial-one__btn-box">
-                    <a href="#" class="testimonial-one__btn thm-btn">View All Our</a>
+                <div style="display: flex; justify-content: center;">
+                    <a href="#" >
+                        <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                            View All Our</span>
+                        </button>
+                    </a>
                 </div>
+            </div>
             </div>
         </section>
         <!-- Services 2 start  -->
@@ -1782,8 +1845,12 @@
                         <!--Team One Single End-->
                     </div>
                 </div>
-                <div class="team-one__btn-box">
-                    <a href="team.html" class="team-one__btn thm-btn">View More Members</a>
+                <div style="display: flex; justify-content: center;">
+                    <a href="team.html" >
+                        <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                            View More Members</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1888,8 +1955,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-one__btn-box">
-                    <a href="#" class="testimonial-one__btn thm-btn">View All Our</a>
+                <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <a href="#" >
+                        <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                            View All Our</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -2009,8 +2080,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-one__btn-box">
-                    <a href="#" class="testimonial-one__btn thm-btn">View All Our</a>
+                <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <a href="#" >
+                        <button name="submit" value="Submit" type="submit" class="button-thm-btn pos-rlt" style="padding: 12px 24px; border-radius: 4px !important;"><span>
+                            View All Our</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>

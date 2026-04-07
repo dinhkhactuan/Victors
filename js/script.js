@@ -1571,6 +1571,8 @@
 				forceHeight: true,
 				forceWidth: true
 			});
+			// Hiển thị lại sau khi đã bẻ cong xong
+			$('.curved-circle').css({'opacity': '1', 'visibility': 'visible'});
 		}
 
 		if ($('.curved-circle-2').length) {
@@ -1581,6 +1583,7 @@
 				forceHeight: true,
 				forceWidth: true
 			});
+			$('.curved-circle-2').css({'opacity': '1', 'visibility': 'visible'});
 		}
 
 		if ($('.curved-circle-3').length) {
@@ -1591,6 +1594,7 @@
 				forceHeight: true,
 				forceWidth: true
 			});
+			$('.curved-circle-3').css({'opacity': '1', 'visibility': 'visible'});
 		}
 
 		// Popup for YouTube links
@@ -1645,7 +1649,43 @@
 			});
 		});
 
+		// === Counter Up Animation ===
+		function initCounterUp() {
+			const countElements = document.querySelectorAll('.count');
+			if (!countElements.length) return;
 
+			const startCounter = (el) => {
+				const target = parseInt(el.getAttribute('data-target'));
+				const duration = 2000;
+				const stepTime = 20;
+				const totalSteps = duration / stepTime;
+				const increment = target / totalSteps;
+				let current = 0;
+
+				const counter = setInterval(() => {
+					current += increment;
+					if (current >= target) {
+						el.innerText = target >= 1000 ? Math.floor(target / 1000) : target;
+						clearInterval(counter);
+					} else {
+						el.innerText = target >= 1000 ? Math.floor(current / 1000) : Math.floor(current);
+					}
+				}, stepTime);
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						startCounter(entry.target);
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.5 });
+
+			countElements.forEach(el => observer.observe(el));
+		}
+
+		initCounterUp();
 
 	});
 

@@ -168,6 +168,12 @@
 }
 
 
+.curved-circle, .curved-circle-2, .curved-circle-3 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
 /*** 
 
 ====================================================================

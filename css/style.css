@@ -486,3 +486,91 @@ Lizar Business HTML Template
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
+
+/* count index */
+.counter-section {
+    padding: 80px 0;
+    background-color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.counter-item {
+    text-align: left;
+    padding: 40px 30px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.counter-item .icon {
+    font-size: 40px;
+    color: #e67e22; /* Màu cam đặc trưng */
+    margin-bottom: 20px;
+}
+
+.counter-item .number {
+    font-size: 60px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.counter-item .label {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .counter-item { text-align: center; }
+}
+
+.main-testimonial {
+    background: #0d0d10;
+    padding: 80px 0;
+}
+.main-testimonial__grid-item:nth-child(odd) .testimonial-item__content {
+    background: #18181c;
+    border: 1px solid #28282e;
+}
+.main-testimonial__grid-item:nth-child(even) .testimonial-item__content {
+    background: #111114;
+    border: 1px solid #222228;
+}
+.testimonial-item__content {
+    border-radius: 18px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-item__content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+.testimonial-item__text { color: #b0b0be; line-height: 1.72; }
+.testimonial-item__name { color: #fff; font-weight: 700; }
+.testimonial-item__role { color: #6b6b80; font-style: normal; }
+.testimonial-item__extra-text { color: #555566; font-size: 0.8rem; }
+.google-full-review {
+    color: #4285F4;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 6px;
+}
+.google-full-review:hover { text-decoration: underline; }
