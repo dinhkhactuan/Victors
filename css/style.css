@@ -535,6 +535,54 @@ Lizar Business HTML Template
     margin: 0;
 }
 
+.super-diagonal-marquee {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagonal-wrapper {
+    display: flex;
+    width: max-content;
+    transform: rotate(-4deg) scale(1.5); 
+    white-space: nowrap;
+}
+
+.marquee-text-v2 {
+    font-family: 'Quantico', sans-serif;
+    font-size: 80px; 
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #838383; 
+    padding-right: 30px;
+    letter-spacing: 5px;
+    animation: marquee-super-diagonal 30s linear infinite;
+}
+
+@keyframes marquee-super-diagonal {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@media (max-width: 768px) {
+    .marquee-text-v2 {
+        font-size: 40px;
+        -webkit-text-stroke: 1.5px #000;
+    }
+    .super-diagonal-marquee {
+        height: 300px;
+    }
+    .diagonal-wrapper {
+        transform: rotate(-25deg) scale(1.8);
+    }
+}
+
 @media (max-width: 768px) {
     .counter-item { text-align: center; }
 }
