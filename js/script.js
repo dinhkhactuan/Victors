@@ -910,7 +910,66 @@
 		}
 	}
 
+	(function() {
+		const track = document.getElementById('logoTrack');
+		if (!track) return;
 
+		// 1. Prepare seamless loop by cloning original set
+		const originalHTML = track.innerHTML;
+		track.innerHTML = originalHTML + originalHTML;
+		
+		// Mark clones for Desktop hiding logic
+		const items = Array.from(track.children);
+		const half = items.length / 2;
+		items.forEach((item, index) => {
+			if (index >= half) item.classList.add('clone');
+		});
+
+		function animateSpotlight() {
+			// Only run color/zoom logic if we are in Scroll Mode (Flex)
+			const isScrollMode = window.getComputedStyle(track).display === 'flex';
+			
+			if (isScrollMode) {
+			const logos = track.querySelectorAll('figure');
+			const viewportWidth = window.innerWidth;
+			const center = viewportWidth / 2;
+			
+			// Target Zone: Middle 40% (0.3 to 0.7)
+			const zoneStart = viewportWidth * 0.30;
+			const zoneEnd = viewportWidth * 0.70;
+			const maxDistance = viewportWidth * 0.20; 
+
+			logos.forEach(logo => {
+				const rect = logo.getBoundingClientRect();
+				const logoMid = rect.left + rect.width / 2;
+				const svg = logo.querySelector('svg');
+
+				if (logoMid >= zoneStart && logoMid <= zoneEnd) {
+				// --- Intensity Logic (Center = 1.0, Edge of Zone = 0.0) ---
+				const distance = Math.abs(logoMid - center);
+				let intensity = 1 - (distance / maxDistance);
+				intensity = Math.max(0, Math.min(1, intensity));
+
+				// Grayscale: 100% -> 0%
+				const grayValue = 100 - (intensity * 100);
+				// Opacity: 0.7 -> 1.0
+				const opacityValue = 0.7 + (intensity * 0.3);
+
+				svg.style.filter = `grayscale(${grayValue}%)`;
+				svg.style.opacity = opacityValue;
+				} else {
+				// Outside Zone: Reset to Grayscale state
+				svg.style.filter = `grayscale(100%)`;
+				svg.style.opacity = 0.7;
+				svg.style.transform = `scale(1)`;
+				}
+			});
+			}
+			requestAnimationFrame(animateSpotlight);
+		}
+
+		requestAnimationFrame(animateSpotlight);
+		})();
 
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {

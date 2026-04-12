@@ -660,3 +660,75 @@ Lizar Business HTML Template
     background-color: #fff;
     color: #333;
 }
+
+
+/* --- DESKTOP GRID (Mouse Users) --- */
+@media (min-width: 1025px) and (hover: hover) {
+    .banner-block__logo .logos figure { margin: 0; display: flex; justify-content: center; }
+    .banner-block__logo .logos figure svg {
+    height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.7; 
+    transition: all 0.2s ease;
+    }
+    .banner-block__logo .logos figure:hover svg {
+    filter: grayscale(0%);
+    opacity: 1;
+    }
+    /* Hide clones used for mobile loop */
+    .banner-block__logo .logos figure.clone { display: none; }
+}
+
+/* --- TOUCH/TABLET/MOBILE STRIP --- */
+@media (max-width: 1024px), (pointer: coarse) {
+    .logos-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    }
+
+    .logos-track {
+    display: flex;
+    width: max-content;
+    animation: slide-infinite 30s linear infinite;
+    will-change: transform;
+    }
+
+    .banner-block__logo .logos figure {
+    margin: 0;
+    padding: 0 45px;
+    flex-shrink: 0;
+    }
+
+    .banner-block__logo .logos figure svg {
+    height: 45px;
+    width: auto;
+    display: block;
+    filter: grayscale(100%);
+    opacity: 0.7; 
+    transform: scale(1); /* Start at 1x */
+    will-change: filter, opacity, transform;
+    pointer-events: none;
+    }
+
+    @keyframes slide-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+    }
+}
+
+.sr-only,
+.sr-only-focusable:not(:focus):not(:focus-within) {
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+.sr-only-focusable:not(:focus):not(:focus-within):not(caption),
+.sr-only:not(caption) {
+    position: absolute !important;
+}

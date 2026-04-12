@@ -441,8 +441,9 @@
 }
 
 .testimonial-link-custom:hover .testimonial-card {
-    border-color: var(--primary-blue, #007bff);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    border-color: var(--primary-blue, #0a66c2);
+    box-shadow: 0 10px 25px rgba(10, 102, 194, 0.25);
 }
 
 .testimonial-card .name {
