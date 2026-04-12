@@ -622,3 +622,41 @@ Lizar Business HTML Template
     margin-top: 6px;
 }
 .google-full-review:hover { text-decoration: underline; }
+
+.main-menu__lang-and-search-box select.wide,
+.main-topbar__lang-select select.wide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--thm-white);
+    box-sizing: border-box;
+    cursor: pointer;
+    float: none;
+    font-family: inherit;
+    color: var(--thm-white);
+    font-weight: 400;
+    height: 35px;
+    width: 35px !important;
+    font-size: 18px;
+    line-height: 30px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    text-align-last: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-image: none;
+}
+
+.main-menu__lang-and-search-box select.wide option,
+.main-topbar__lang-select select.wide option {
+    background-color: #fff;
+    color: #333;
+}
