@@ -732,3 +732,77 @@ Lizar Business HTML Template
 .sr-only:not(caption) {
     position: absolute !important;
 }
+
+/* The Grid System */
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px; /* Large gap for a premium feel */
+    flex-wrap: wrap;
+}
+
+.logo-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
+
+/* Logo Sizing & Hover */
+.logo-box {
+    height: 60px; /* Fixed height ensures horizontal alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.logo-box img {
+    max-height: 100%;
+    max-width: 160px;
+    width: auto;
+    filter: grayscale(100%); /* Muted by default */
+    opacity: 0.7;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.logo-card:hover img {
+    filter: grayscale(0%); /* Full color on hover */
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* Text Labels */
+.award-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.award-year {
+    display: block;
+    font-size: 0.85rem;
+    color: #707070;
+}
+
+/* Footer Link */
+.logo-wall-footer {
+    margin-top: 50px;
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .logo-grid {
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo-card {
+        max-width: 100%;
+    }
+}
