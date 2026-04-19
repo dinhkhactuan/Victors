@@ -911,101 +911,71 @@
 	}
 
 	(function() {
-		const track = document.querySelector('.logos-custom .logos-track');
-		if (!track) return;
+		const setupTrack = (selector) => {
+			const track = document.querySelector(selector);
+			if (!track) return;
 
-		const originalContent = track.innerHTML;
-		track.innerHTML = originalContent + originalContent;
+			const originalContent = track.innerHTML;
+			let isDuplicated = false;
 
-		function animateSpotlight() {
-			const isScrollMode = window.getComputedStyle(track).display === 'flex';
-			
-			if (isScrollMode) {
-				const logos = track.querySelectorAll('figure');
-				const viewportWidth = window.innerWidth;
-				const center = viewportWidth / 2;
-				
-				const zoneStart = viewportWidth * 0.3;
-				const zoneEnd = viewportWidth * 0.7;
-				const maxDistance = viewportWidth * 0.2; 
+			function runAnimation() {
+				const isMobile = window.innerWidth < 768;
+				const isScrollMode = window.getComputedStyle(track).display === 'flex';
 
-				logos.forEach(logo => {
-					const rect = logo.getBoundingClientRect();
-					const logoMid = rect.left + rect.width / 2;
-					
-					const target = logo.querySelector('img, svg');
-					if (!target) return;
-
-					if (logoMid >= zoneStart && logoMid <= zoneEnd) {
-						const distance = Math.abs(logoMid - center);
-						let intensity = 1 - (distance / maxDistance);
-						intensity = Math.max(0, Math.min(1, intensity));
-
-						const grayValue = 100 - (intensity * 100);
-						const opacityValue = 0.7 + (intensity * 0.3);
-
-						target.style.filter = `grayscale(${grayValue}%)`;
-						target.style.opacity = opacityValue;
-					} else {
-						target.style.filter = `grayscale(100%)`;
-						target.style.opacity = 0.7;
+				if (isMobile) {
+					if (!isDuplicated) {
+						track.innerHTML = originalContent + originalContent;
+						isDuplicated = true;
 					}
-				});
-			}
-			requestAnimationFrame(animateSpotlight);
-		}
 
-		requestAnimationFrame(animateSpotlight);
-	})();
+					if (isScrollMode) {
+						const logos = track.querySelectorAll('figure');
+						const viewportWidth = window.innerWidth;
+						const center = viewportWidth / 2;
+						const maxDistance = viewportWidth * 0.2;
 
-	(function() {
-		const track = document.querySelector('.logos .logos-track');
-		if (!track) return;
+						logos.forEach(logo => {
+							const rect = logo.getBoundingClientRect();
+							const logoMid = rect.left + rect.width / 2;
+							const target = logo.querySelector('img, svg');
+							if (!target) return;
 
-		const originalHTML = track.innerHTML;
-		track.innerHTML = originalHTML + originalHTML;
+							const distance = Math.abs(logoMid - center);
+							let intensity = 1 - (distance / maxDistance);
+							intensity = Math.max(0, Math.min(1, intensity));
 
-		function animateSVGSpotlight() {
-			const isScrollMode = window.getComputedStyle(track).display === 'flex';
-			
-			if (isScrollMode) {
-				const logos = track.querySelectorAll('figure');
-				const viewportWidth = window.innerWidth;
-				const center = viewportWidth / 2;
-				
-				const zoneStart = viewportWidth * 0.3;
-				const zoneEnd = viewportWidth * 0.7;
-				const maxDistance = viewportWidth * 0.2; 
+							const grayValue = 100 - (intensity * 100);
+							const opacityValue = 0.7 + (intensity * 0.3);
 
-				logos.forEach(logo => {
-					const rect = logo.getBoundingClientRect();
-					const logoMid = rect.left + rect.width / 2;
-					
-					const svg = logo.querySelector('svg');
-					if (!svg) return;
-
-					if (logoMid >= zoneStart && logoMid <= zoneEnd) {
-						const distance = Math.abs(logoMid - center);
-						let intensity = 1 - (distance / maxDistance);
-						intensity = Math.max(0, Math.min(1, intensity));
-
-						const grayValue = 100 - (intensity * 100);
-						const opacityValue = 0.7 + (intensity * 0.3);
-
-						svg.style.filter = `grayscale(${grayValue}%)`;
-						svg.style.opacity = opacityValue;
-						svg.style.transform = `scale(${1 + intensity * 0.1})`;
-					} else {
-						svg.style.filter = `grayscale(100%)`;
-						svg.style.opacity = 0.7;
-						svg.style.transform = `scale(1)`;
+							target.style.filter = `grayscale(${grayValue}%)`;
+							target.style.opacity = opacityValue;
+							
+							if (selector === '.logos .logos-track') {
+								target.style.transform = `scale(${1 + intensity * 0.1})`;
+							}
+						});
 					}
-				});
+				} else {
+					if (isDuplicated) {
+						track.innerHTML = originalContent;
+						isDuplicated = false;
+					}
+					// Xóa mọi style inline đã thêm
+					const elements = track.querySelectorAll('img, svg');
+					elements.forEach(el => {
+						el.style.filter = '';
+						el.style.opacity = '';
+						el.style.transform = '';
+					});
+				}
+				requestAnimationFrame(runAnimation);
 			}
-			requestAnimationFrame(animateSVGSpotlight);
-		}
 
-		requestAnimationFrame(animateSVGSpotlight);
+			requestAnimationFrame(runAnimation);
+		};
+
+		setupTrack('.logos-custom .logos-track');
+		setupTrack('.logos .logos-track');
 	})();
 	
 	//Hide Loading Box (Preloader)
