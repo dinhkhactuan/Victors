@@ -958,6 +958,56 @@
 		requestAnimationFrame(animateSpotlight);
 	})();
 
+	(function() {
+		const track = document.querySelector('.logos .logos-track');
+		if (!track) return;
+
+		const originalHTML = track.innerHTML;
+		track.innerHTML = originalHTML + originalHTML;
+
+		function animateSVGSpotlight() {
+			const isScrollMode = window.getComputedStyle(track).display === 'flex';
+			
+			if (isScrollMode) {
+				const logos = track.querySelectorAll('figure');
+				const viewportWidth = window.innerWidth;
+				const center = viewportWidth / 2;
+				
+				const zoneStart = viewportWidth * 0.3;
+				const zoneEnd = viewportWidth * 0.7;
+				const maxDistance = viewportWidth * 0.2; 
+
+				logos.forEach(logo => {
+					const rect = logo.getBoundingClientRect();
+					const logoMid = rect.left + rect.width / 2;
+					
+					const svg = logo.querySelector('svg');
+					if (!svg) return;
+
+					if (logoMid >= zoneStart && logoMid <= zoneEnd) {
+						const distance = Math.abs(logoMid - center);
+						let intensity = 1 - (distance / maxDistance);
+						intensity = Math.max(0, Math.min(1, intensity));
+
+						const grayValue = 100 - (intensity * 100);
+						const opacityValue = 0.7 + (intensity * 0.3);
+
+						svg.style.filter = `grayscale(${grayValue}%)`;
+						svg.style.opacity = opacityValue;
+						svg.style.transform = `scale(${1 + intensity * 0.1})`;
+					} else {
+						svg.style.filter = `grayscale(100%)`;
+						svg.style.opacity = 0.7;
+						svg.style.transform = `scale(1)`;
+					}
+				});
+			}
+			requestAnimationFrame(animateSVGSpotlight);
+		}
+
+		requestAnimationFrame(animateSVGSpotlight);
+	})();
+	
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
 		if ($('.preloader').length) {

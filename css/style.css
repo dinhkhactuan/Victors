@@ -881,3 +881,42 @@ Lizar Business HTML Template
         animation-play-state: paused;
     }
 }
+
+@media (max-width: 1024px), (pointer: coarse) {
+    .banner-block__logo .logos {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    /* Dải logo */
+    .banner-block__logo .logos .logos-track {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: max-content;
+        will-change: transform;
+        animation: scrollSVGInfinite 25s linear infinite;
+    }
+
+    .banner-block__logo .logos .logos-track figure {
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    @keyframes scrollSVGInfinite {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); } 
+    }
+
+    /* Dừng khi chạm vào */
+    .banner-block__logo .logos:active .logos-track {
+        animation-play-state: paused;
+    }
+}
