@@ -842,38 +842,42 @@ Lizar Business HTML Template
 
   @keyframes scroll-left {
     0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* -50% vì duplicate logo bên dưới */
+    100% { transform: translateX(-50%); } 
   }
 }
 
 @media (max-width: 1024px), (pointer: coarse) {
+    .logos-custom {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        /* Hiệu ứng mờ 2 đầu */
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
 
-  .banner-block__logo .logos-custom {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
+    .logos-custom .logos-track {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: max-content; 
+        will-change: transform;
+        animation: scrollContinuous 20s linear infinite;
+    }
 
-  .logos-custom .logos-track {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    width: max-content;
-    animation: scroll-left 24s linear infinite;
-  }
+    .logos-custom .logos-track figure {
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0 32px; 
+    }
 
-  .logos-custom .logos-track figure {
-    flex-shrink: 0;
-    margin: 0 36px;
-    line-height: 0;
-  }
+    @keyframes scrollContinuous {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); } 
+    }
 
-  .logos-custom:hover .logos-track {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll-left {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+    .logos-custom:hover .logos-track {
+        animation-play-state: paused;
+    }
 }
