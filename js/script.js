@@ -919,7 +919,7 @@
 			let isDuplicated = false;
 
 			function runAnimation() {
-				const isMobile = window.innerWidth < 768;
+				const isMobile = window.innerWidth <= 1024;
 				const isScrollMode = window.getComputedStyle(track).display === 'flex';
 
 				if (isMobile) {
@@ -960,7 +960,6 @@
 						track.innerHTML = originalContent;
 						isDuplicated = false;
 					}
-					// Xóa mọi style inline đã thêm
 					const elements = track.querySelectorAll('img, svg');
 					elements.forEach(el => {
 						el.style.filter = '';

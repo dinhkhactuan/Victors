@@ -886,6 +886,8 @@ Lizar Business HTML Template
     .banner-block__logo .logos {
         display: flex;
         overflow: hidden;
+        gap: 0 !important;
+        justify-content: flex-start !important;
         width: 100%;
         position: relative;
         mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
