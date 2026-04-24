@@ -798,8 +798,10 @@ Lizar Business HTML Template
 @media (max-width: 768px) {
     .logo-grid {
         gap: 40px;
+        grid-template-columns: repeat(2, 1fr) !important;
         flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
     
     .logo-card {
@@ -934,7 +936,7 @@ Lizar Business HTML Template
   grid-template-columns: repeat(6, 1fr);
   max-width: 1170px;
   margin: 0 auto;
-  gap: 20px 0;
+  gap: 20px 20px;
 }
 
 .logo-card {
