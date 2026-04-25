@@ -418,8 +418,12 @@ Lizar Business HTML Template
     gap: 10px;
 }
 
+.hosted-photo{
+    flex-shrink: 0;
+}
+
 .podcasts .hosted-photo img {
-    width: 32px;
+    /* width: 32px; */
     height: 32px;
     border-radius: 50%;
 }
@@ -816,6 +820,14 @@ Lizar Business HTML Template
     width: 100%;
   }
 
+.logo-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1170px;
+  margin: 0 auto;
+  gap: 30px 30px;
+}
+
 @media (max-width: 1024px), (pointer: coarse) {
 
   .banner-block__logo .logos {
@@ -885,6 +897,13 @@ Lizar Business HTML Template
 }
 
 @media (max-width: 1024px), (pointer: coarse) {
+    .logo-grid-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1170px;
+        margin: 0 auto;
+        gap: 30px 30px;
+    }
     .banner-block__logo .logos {
         display: flex;
         overflow: hidden;
@@ -929,14 +948,6 @@ Lizar Business HTML Template
   --brand-accent: #007bff;
   --text-main: #1a1a1a;
   --text-muted: #666;
-}
-
-.logo-grid-bottom {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  max-width: 1170px;
-  margin: 0 auto;
-  gap: 30px 30px;
 }
 
 .logo-grid-bottom figure:focus-visible {
