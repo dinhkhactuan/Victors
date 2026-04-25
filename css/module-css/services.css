@@ -1232,14 +1232,20 @@
 }
 
 .main-services__features-grid {
-    display: block;
+    display: flex;
     gap: 40px;
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .main-services__features-grid {
         display: flex;
+    }
+    .services-one__single{
+        text-align: center;
+    }
+    .main-services__features-wrapper .main-services__features-grid{
+        display: block;
     }
 }
 

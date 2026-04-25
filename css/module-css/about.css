@@ -826,7 +826,20 @@
 }
 
 
-
+@media (max-width: 768px) {
+    .about-one__grid{
+        gap: 40px;
+    }
+    .about-one__bottom{
+        margin-top: 40px;
+    }
+    .about-one__standard-img{
+        width: 100%;
+    }
+    .about-one__standard-img img{
+        width: 100%;
+    }
+}
 
 
 

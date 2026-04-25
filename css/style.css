@@ -811,6 +811,32 @@ Lizar Business HTML Template
     .logo-card {
         max-width: 100%;
     }
+    .counter-section{
+        padding-top: 0;
+    }
+    .project-one{
+        padding-top: 0;
+    }
+    .project-one__grid{
+        margin-bottom: 20px;
+    }
+    .social-custom-wrapper{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .social-custom-wrapper .li-card{
+        padding: 0;
+        border: none;
+    }
+    .faq-one__curved-circle{
+        width: 100%;
+        height: 100%;
+    }
+    .question-icon{
+        display: none;
+    }
+    .faq-one-question-icon{
+        padding-top: 0;
+    }
 }
 
 .banner-block__logo .logos-track {
