@@ -931,7 +931,7 @@ Lizar Business HTML Template
   --text-muted: #666;
 }
 
-.logo-grid {
+.logo-grid-bottom {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   max-width: 1170px;
@@ -939,7 +939,7 @@ Lizar Business HTML Template
   gap: 30px 30px;
 }
 
-.logo-grid figure:focus-visible {
+.logo-grid-bottom figure:focus-visible {
   outline: 2px solid var(--brand-accent);
   outline-offset: 8px;
   border-radius: 8px;
