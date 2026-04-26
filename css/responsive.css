@@ -1192,7 +1192,7 @@
     }
     
     .main-menu__subscribe-now-btn, .main-topbar__revenue, .main-topbar__client-login, .main-topbar__lang-select {
-        display: none;
+        display: block;
 		margin-bottom: 30px;
     }
 
