@@ -284,12 +284,7 @@
         padding: 0;
     }
     .case-study-section__grid .button-thm-btn{
-        margin-top: 20px;
-        left: 50%;
-        transform: translateX(-100%);
         padding: 0 10px;
-        background-color: #FF5C00 !important;
-        color: white !important;
     }
     .main-services{
         padding-bottom: 0;
