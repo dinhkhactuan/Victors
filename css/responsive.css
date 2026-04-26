@@ -1945,6 +1945,7 @@
 
 	.case-study-stat-item {
 		padding: 8px;
+		justify-content: start !important;
 	}
 
 	.case-study-text {
