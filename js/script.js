@@ -10,7 +10,22 @@
 		trialWarn: false
 	});
 
+	const watchBtn = document.getElementById('watchBtn');
+    if (watchBtn) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    watchBtn.classList.add('pulse-animate');
+                    // Chỉ chạy hiệu ứng một lần duy nhất
+                    observer.unobserve(watchBtn);
+                }
+            });
+        }, { 
+            threshold: 0.5 
+        });
 
+        observer.observe(watchBtn);
+    }
 
 	//Write Here Nu
 
