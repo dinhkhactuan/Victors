@@ -10,23 +10,29 @@
 		trialWarn: false
 	});
 
-	const watchBtn = document.getElementById('watchBtn');
-    if (watchBtn) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    watchBtn.classList.add('pulse-animate');
-                    // Chỉ chạy hiệu ứng một lần duy nhất
-                    observer.unobserve(watchBtn);
-                }
-            });
-        }, { 
-            threshold: 0.5 
-        });
+	// Sử dụng selector thuộc tính để lấy tất cả phần tử có id là watchBtn
+	const watchButtons = document.querySelectorAll('[id="watchBtn"]');
 
-        observer.observe(watchBtn);
-    }
+	if (watchButtons.length > 0) {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// Thêm class animation cho đúng phần tử đang hiển thị
+					entry.target.classList.add('pulse-animate');
+					
+					// Dừng quan sát phần tử này
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { 
+			threshold: 0.5 
+		});
 
+		// Quan sát tất cả các phần tử tìm được
+		watchButtons.forEach(btn => {
+			observer.observe(btn);
+		});
+	}
 	//Write Here Nu
 
 
