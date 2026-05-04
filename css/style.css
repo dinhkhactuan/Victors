@@ -837,6 +837,18 @@ Lizar Business HTML Template
     .faq-one-question-icon{
         padding-top: 0;
     }
+    .main-header-one__lower-inner .main-menu__subscribe-now-btn{
+        display: none;
+    }
+    .main-topbar__right .main-topbar__client-login{
+        display: none;
+    }
+    .main-topbar__right .main-topbar__lang-select{
+        display: none;
+    }
+    .main-topbar__left .main-topbar__revenue{
+        display: none;
+    }
 }
 
 .banner-block__logo .logos-track {
@@ -856,6 +868,9 @@ Lizar Business HTML Template
 
 @media (max-width: 1024px), (pointer: coarse) {
 
+    .main-header-one__lower-inner .main-menu__subscribe-now-btn{
+        display: none;
+    }
   .banner-block__logo .logos {
     display: flex;
     overflow: hidden;
